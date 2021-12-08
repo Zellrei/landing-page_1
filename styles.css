@@ -34,9 +34,7 @@ button {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* background-color: #1F2937; */
 	background-color: #ffc56e;
-	/* color: #F9FAF8; */
 	color: #000000;
 	padding: 10px 100px 10px 100px;
 }
