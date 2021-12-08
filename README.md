@@ -4,3 +4,6 @@ https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/lan
 
 
 Logo credit: lime by parkjisun from the Noun Project
+Photo credits : 
+- https://unsplash.com
+- https://www.pexels.com/
