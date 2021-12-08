@@ -1,5 +1,4 @@
 * {
-	/* border: 1px lime solid; */
 	font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
@@ -9,7 +8,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	
+
 }
 
 .flex-global-container {
@@ -17,9 +16,16 @@ body {
 	flex-direction: column;
 }
 
+a {
+	text-decoration: none;
+	color: unset;
+}
+
 button {
 	margin: 0;
 	padding: 0;
+	cursor: pointer;
+	font-size: 20px;
 }
 
 /* ----- HEADER ----- */
@@ -28,8 +34,10 @@ button {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #1F2937;
-	color: #F9FAF8;
+	/* background-color: #1F2937; */
+	background-color: #ffc56e;
+	/* color: #F9FAF8; */
+	color: #000000;
 	padding: 10px 100px 10px 100px;
 }
 
@@ -49,7 +57,7 @@ button {
 }
 
 .header-right > ul > li {
-	color: #E5E7EB;
+	color: #000000;
 	font-size: 18px;
 	margin-left: 20px;
 	margin-right: 0;
@@ -62,20 +70,18 @@ button {
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 75px 100px;
-	background-color: #1F2937;
-	color: #F9FAF8;
+	background-color: #ffc56e;
+	color: #000000;
 }
 
 .hero-content {
 	display: block;
-	flex-shrink: 1;
 	padding: 20px 25px 20px 0;
 	width: 500px;
 }
 
 .hero-content > h1 {
-	margin-top: 0;
-	margin-bottom: 0;
+	margin: 0;
 	font-size: 48px;
 	font-weight: 900;
 }
@@ -83,12 +89,13 @@ button {
 .hero-content > p {
 	margin-top: 0.2em;
 	font-size: 18px;
-	color: #E5E7EB;
+	color: #000000;
 }
 
 .hero-content > button {
-	background-color: #3882F6;
-	color: #F9FAF8;
+	display: block;
+	background-color: #f8682f;
+	color: #ffffff;
 	font-weight: 600;
 	padding: 10px 30px;
 	border: none;
@@ -97,8 +104,8 @@ button {
 }
 
 .hero-content > button:active {
-	color: black;
-	background-color: aqua;
+	background-color: rgb(201, 255, 51);
+	color: #1F2937;
 }
 
 .hero-image {
@@ -107,24 +114,12 @@ button {
 	height: 300px;
 	max-width: 500px;
 	overflow: hidden;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	text-align: center;
-	background-color: rgb(122, 127, 148);
-	object-fit:fill;
-}
-
-.hero-image > div {
-	display: flex;
-	text-align: center;
-	align-self: center;
-	object-fit: cover;
+	object-fit: fill;
 }
 
 /* -----  CONTENT RANDOM INFO ----- */
 
-.content-random-info {
+.content-random-trivia {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -133,17 +128,24 @@ button {
 	margin-bottom: 50px;
 }
 
-.content-random-info-list-container {
+.content-random-trivia-list-container {
 	display: flex;
 	flex-wrap: wrap;
 	list-style-type: none;
 	padding: 0;
 	flex: 1;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
-.content-random-info-list-container > li > img {
-	border: 3px solid #3882F6;
+.content-random-trivia-list-container > li
+{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.content-random-trivia-list-container > li > img {
+	border: 3px solid #a4f638;
 	border-radius: 10px;
 	height: 200px;
 	width: 200px;
@@ -151,8 +153,9 @@ button {
 	object-fit: cover;
 }
 
-.content-random-info-list-container > li > div {
-	text-align: center;
+.content-random-trivia-list-container > li > div {
+	align-self: center;
+	width: 200px;
 }
 
 /* ----- QUOTE ----- */
@@ -160,7 +163,7 @@ button {
 .content-quote {
 	font-size: 36px;
 	font-weight: lighter;
-	background-color: #E5E7EB;
+	background-color: #fffeae;
 	padding: 80px 160px;
 }
 
@@ -178,53 +181,47 @@ button {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	background-color: #3882F6;
+	background-color: #f8682f;
 	margin: 80px 100px;
 	align-items: center;
 	border-radius: 10px;
-	color: #F9FAF8;
+	color: #ffffff;
 }
 
 .cta-container-legend > h3 {
-	font-size: 22px;
-	margin-top: 40px;
-	margin-left: 20px;
-	margin-bottom: 0;
+	font-size: 24px;
+	margin: 40px 0 0 20px;
 }
 
 .cta-container-legend > p {
-	margin-top: 0;
-	margin-left: 20px;
-	margin-bottom: 40px;
+	margin: 0 0 40px 20px;
 }
 
 .cta-container > button {
+	font-size: 20px;
 	margin: 20px;
-	padding: 0px 20px;
-	background-color: #3882F6;
+	padding: 10px 30px;
+	background-color: #f8682f;
 	border: 2px #F9FAF8 solid;
-	color: #F9FAF8;
+	color: #ffffff;
 	border-radius: 8px;
-	width: fit-content;
-	height: 30px;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .cta-container > button:active {
-	background-color: aqua;
-	color: black;
+	background-color: rgb(201, 255, 51);
+	color: #1F2937;
 }
 
 /* ----- FOOTER ----- */
 
 .footer {
 	display: flex;
-	flex: 0 1 100%;
 	justify-content: center;
 	margin-top: auto;
-	background-color: #1F2937;
-	color: #E5E7EB;
+	background-color: #ffc56e;
+	color: #000000;
 	padding: 30px 0;
 	font-size: 0.8em;
 }
