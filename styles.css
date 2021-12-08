@@ -1,12 +1,18 @@
 * {
 	/* border: 1px lime solid; */
-	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.flex-global-container {
 	display: flex;
 	flex-direction: column;
 }
@@ -16,14 +22,15 @@ button {
 	padding: 0;
 }
 
+/* ----- HEADER ----- */
+
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #1F2937;
 	color: #F9FAF8;
-	padding-left: 100px;
-	padding-right: 100px;
+	padding: 10px 100px 10px 100px;
 }
 
 .header-left {
@@ -44,27 +51,37 @@ button {
 .header-right > ul > li {
 	color: #E5E7EB;
 	font-size: 18px;
-	margin: 10px;
-	margin-right: 0
+	margin-left: 20px;
+	margin-right: 0;
 }
+
+/* ----- HERO ----- */
 
 .hero {
 	display: flex;
-	padding: 100px;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 75px 100px;
 	background-color: #1F2937;
 	color: #F9FAF8;
 }
 
 .hero-content {
-	flex: 1;
+	display: block;
+	flex-shrink: 1;
+	padding: 20px 25px 20px 0;
+	width: 500px;
 }
 
 .hero-content > h1 {
+	margin-top: 0;
+	margin-bottom: 0;
 	font-size: 48px;
 	font-weight: 900;
 }
 
 .hero-content > p {
+	margin-top: 0.2em;
 	font-size: 18px;
 	color: #E5E7EB;
 }
@@ -74,38 +91,71 @@ button {
 	color: #F9FAF8;
 	font-weight: 600;
 	padding: 10px 30px;
+	border: none;
 	border-radius: 5px;
+	font-size: 16px;
+}
+
+.hero-content > button:active {
+	color: black;
+	background-color: aqua;
 }
 
 .hero-image {
-	flex: 1;
-	background-color: grey;;
+	display: block;
+	flex-shrink: 1;
+	height: 300px;
+	max-width: 500px;
+	overflow: hidden;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
 	text-align: center;
-	padding-top: inherit;
-	padding-bottom: inherit;
+	background-color: rgb(122, 127, 148);
+	object-fit:fill;
 }
+
+.hero-image > div {
+	display: flex;
+	text-align: center;
+	align-self: center;
+	object-fit: cover;
+}
+
+/* -----  CONTENT RANDOM INFO ----- */
 
 .content-random-info {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	padding: 2px 160px;
+	padding: 2px 100px;
+	margin-top: 10px;
+	margin-bottom: 50px;
 }
 
 .content-random-info-list-container {
 	display: flex;
+	flex-wrap: wrap;
 	list-style-type: none;
 	padding: 0;
+	flex: 1;
+	justify-content: space-around;
 }
 
 .content-random-info-list-container > li > img {
 	border: 3px solid #3882F6;
 	border-radius: 10px;
-	height: 100px;
-	width: 100px;
-	margin: 15px;
+	height: 150px;
+	width: 150px;
+	margin: 20px;
+	object-fit: cover;
 }
+
+.content-random-info-list-container > li > div {
+	text-align: center;
+}
+
+/* ----- QUOTE ----- */
 
 .content-quote {
 	font-size: 36px;
@@ -119,7 +169,10 @@ button {
 	display: block;
 	text-align: right;
 	font-weight: 900;
+	margin: 10px;
 }
+
+/* ----- CALL TO ACTION ----- */
 
 .cta-container {
 	display: flex;
@@ -132,8 +185,20 @@ button {
 	color: #F9FAF8;
 }
 
+.cta-container-legend > h3 {
+	font-size: 22px;
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+
+.cta-container-legend > p {
+	margin-top: 0;
+	margin-left: 20px;
+	margin-bottom: 40px;
+}
+
 .cta-container > button {
-	
 	margin: 20px;
 	padding: 0px 20px;
 	background-color: #3882F6;
@@ -143,7 +208,15 @@ button {
 	width: fit-content;
 	height: 30px;
 	font-weight: bold;
+	font-size: 16px;
 }
+
+.cta-container > button:active {
+	background-color: aqua;
+	color: black;
+}
+
+/* ----- FOOTER ----- */
 
 .footer {
 	display: flex;
