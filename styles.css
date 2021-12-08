@@ -145,8 +145,8 @@ button {
 .content-random-info-list-container > li > img {
 	border: 3px solid #3882F6;
 	border-radius: 10px;
-	height: 150px;
-	width: 150px;
+	height: 200px;
+	width: 200px;
 	margin: 20px;
 	object-fit: cover;
 }
